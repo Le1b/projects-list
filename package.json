@@ -1,0 +1,17 @@
+{
+  "name": "projects-list",
+  "version": "0.0.1",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "concurrently": "3.5.1",
+    "express": "4.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.0"
+  }
+}
