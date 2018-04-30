@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import v1 from 'uuid/v1';
 import Controls from './Controls';
-import { getUsers, add } from './../services/api';
+import { add, getUsers } from './../services/api';
 
 class AddProject extends Component {
     state = {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {remove} from '../services/api';
+import { remove } from '../services/api';
 
 class Controls extends Component {
     state = {
@@ -73,12 +73,12 @@ class Controls extends Component {
                 <span>
                     {this.saveLink()} {this.backLink()} {this.viewLink()} {this.editLink()} {this.deleteLink()}
                 </span>
-                <div className={`modal ${this.state.isHidePopUp && ' hide'}`}>
+                <div className={`popup ${this.state.isHidePopUp && 'hide'}`}>
                     <div>
-                        <h4>Are sure to delete project item? Yes No </h4>
+                        <h4>Are sure to delete project item?</h4>
                         <div>
-                            <button onClick={this.handleConfirmDelete}>Yes</button>
-                            <button onClick={this.handleCancelPopup}>No</button>
+                            <button className="btn btn-danger" onClick={this.handleConfirmDelete}>Yes</button>
+                            <button className="btn btn-primary" onClick={this.handleCancelPopup}>No</button>
                         </div>
                         <div>
                             {this.state.message}
